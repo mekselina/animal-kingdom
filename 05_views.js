@@ -33,7 +33,7 @@ const legal_info = magpieViews.view_generator("intro", {
   name: 'legal_info',
   title: 'Legal information',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `In this task, you will be asked to read short metaphoric statements presented in the absence of context and to guess what these statements might mean. Every now and then you will be asked questions about the statements. The whole experiment should take up to five minutes.
+  text: `In this task, you will be asked to read short metaphoric statements presented in the absence of context and to guess what these statements might mean. The whole experiment should take up to five minutes.
          <br />
          <br />
          The only condition on taking part is that you are <b>over 18</b>. Please follow this <a href="http://blake.ppls.ed.ac.uk/~pling/consent-vinicius.html">link</a> to read the consent form about participating in the experiment.
@@ -128,7 +128,8 @@ const slider_rating_custom = magpieViews.view_generator("slider_rating",{
   trials: 15,
   // name should be identical to the variable name
   name: 'slider_rating_custom',
-  data: _.shuffle(task_trial_info.sliderRating)
+  //data: _.shuffle(task_trial_info.sliderRating)
+  data: _.shuffle(create_experimental_data(task_trial_info_nonnegated, task_trial_info_negated).sliderRating)
   // optionLeft: "Not at all confident",
   // optionRight: "Very confident",
 },
@@ -150,7 +151,7 @@ const slider_rating_custom = magpieViews.view_generator("slider_rating",{
           return `<p class='magpie-view-question'><font size = 4 color = "gray">${config.data[CT].question}</font></p>
                   <div class='magpie-view-answer-container'>
                       <span class='magpie-response-slider-option'>${option1}</span>
-                      <input type='range' id='response' class='magpie-response-slider' min='0' max='100' value='50'/>
+                      <input type='range' id='response' class='magpie-response-slider' min='1' max='7' value='4'/>
                       <span class='magpie-response-slider-option'>${option2}</span>
                   </div>
                   <button id="next" class='magpie-view-button magpie-nodisplay'>Next</button>`;
