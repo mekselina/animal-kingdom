@@ -28,7 +28,7 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   } else {
     experimental_data = negated_data;
   }
-  
+
   //store every statement of every animal for one participant
   var all_statements = {sliderRating:[]};
   var count_intensified = 0;
@@ -49,22 +49,22 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
         const intensifier_number = Math.floor(Math.random() * (4 - 2 + 1) + 2);
         all_statements.sliderRating.push(values.find(item => item.item_id === intensifier_number));
       } else {
-        all_statements.sliderRating.push(values.find(item => item.item_id === 1));
+        all_statements.sliderRating.push(values.find(item => item.modal === "non-modal"));
         count_not_intensified = count_not_intensified + 1;
       }
       //when the non-intensified condition was shown 8 times already, show intensified conditions
     } else if (random_number >= 0.5 && random_number < 0.5+(0.5/3) && count_intensified <= 7) {
-      all_statements.sliderRating.push(values.find(item => item.item_id === 2));
+      all_statements.sliderRating.push(values.find(item => item.modal === "actual"));
       count_intensified = count_intensified + 1;
     } else if (random_number >= 0.5+(0.5/3) && random_number < 0.5+(1/3) && count_intensified <= 7) {
-      all_statements.sliderRating.push(values.find(item => item.item_id === 3));
+      all_statements.sliderRating.push(values.find(item => item.modal === "literal"));
       count_intensified = count_intensified + 1;
     } else if (random_number >= 0.5+(1/3) && count_intensified <= 7) {
-      all_statements.sliderRating.push(values.find(item => item.item_id === 4));
+      all_statements.sliderRating.push(values.find(item => item.modal === "real"));
       count_intensified = count_intensified + 1;
       //when intensified condition was already shown more than 7 times, show non-intensified condition
     } else if (count_intensified > 7){
-      all_statements.sliderRating.push(values.find(item => item.item_id === 1));
+      all_statements.sliderRating.push(values.find(item => item.modal === "non-modal"));
     } else {
       console.log("Something went wrong during random number generation.")
     }
