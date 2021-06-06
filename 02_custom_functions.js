@@ -33,6 +33,7 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   var all_statements = {sliderRating:[]};
   var count_intensified = 0;
   var count_not_intensified = 0;
+  const modal_adjectives = ['actual', 'literal', 'real'];
   // loop through different animals
   for (const [animal, values] of Object.entries(experimental_data)) {
     //console.log(`${animal}: ${values}`);
@@ -46,8 +47,9 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
       //limits the non-intensified condition to at most 8 times per participant
       if (count_not_intensified >= 8) {
         // create random number between 2 and 4(random shuffle between the 3 intensifiers)
-        const intensifier_number = Math.floor(Math.random() * (4 - 2 + 1) + 2);
-        all_statements.sliderRating.push(values.find(item => item.item_id === intensifier_number));
+        var randomIndex = Math.floor(Math.random() * modal_adjectives.length); 
+        const modal_random_adjective = modal_adjectives[randomIndex];
+        all_statements.sliderRating.push(values.find(item => item.modal === modal_random_adjective));
       } else {
         all_statements.sliderRating.push(values.find(item => item.modal === "non-modal"));
         count_not_intensified = count_not_intensified + 1;
