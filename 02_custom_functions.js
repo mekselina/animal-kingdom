@@ -44,35 +44,35 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
     // decide which animal sentence is used
     var random_number = Math.random();
     if (random_number < 0.5) {
-      //limits the non-intensified condition to at most 8 times per participant
-      if (count_not_intensified >= 8) {
-        // create random number between 2 and 4(random shuffle between the 3 intensifiers)
-        var randomIndex = Math.floor(Math.random() * modal_adjectives.length); 
+      if (count_not_intensified > 13) {
+        //create random number between 2 and 4(random shuffle between the 3 intensifiers)
+        var randomIndex = Math.floor(Math.random() * modal_adjectives.length);
         const modal_random_adjective = modal_adjectives[randomIndex];
         all_statements.sliderRating.push(values.find(item => item.modal === modal_random_adjective));
       } else {
         all_statements.sliderRating.push(values.find(item => item.modal === "non-modal"));
         count_not_intensified = count_not_intensified + 1;
       }
+
       //when the non-intensified condition was shown 8 times already, show intensified conditions
-    } else if (random_number >= 0.5 && random_number < 0.5+(0.5/3) && count_intensified <= 7) {
+    } else if (random_number >= 0.5 && random_number < 0.5+(0.5/3) && count_intensified <= 13) {
       all_statements.sliderRating.push(values.find(item => item.modal === "actual"));
       count_intensified = count_intensified + 1;
-    } else if (random_number >= 0.5+(0.5/3) && random_number < 0.5+(1/3) && count_intensified <= 7) {
+    } else if (random_number >= 0.5+(0.5/3) && random_number < 0.5+(1/3) && count_intensified <= 13) {
       all_statements.sliderRating.push(values.find(item => item.modal === "literal"));
       count_intensified = count_intensified + 1;
-    } else if (random_number >= 0.5+(1/3) && count_intensified <= 7) {
+    } else if (random_number >= 0.5+(1/3) && count_intensified <= 13) {
       all_statements.sliderRating.push(values.find(item => item.modal === "real"));
       count_intensified = count_intensified + 1;
-      //when intensified condition was already shown more than 7 times, show non-intensified condition
-    } else if (count_intensified > 7){
+    } else if (count_intensified > 13) {
       all_statements.sliderRating.push(values.find(item => item.modal === "non-modal"));
-    } else {
-      console.log("Something went wrong during random number generation.")
     }
-
+    //} else {
+      //console.log("Something went wrong during random number generation.")
 
   }
+
+
 
   return all_statements;
 };
