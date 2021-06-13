@@ -16,6 +16,17 @@
     max-height: 100px;
 }
 
+
+.magpie-response-slider-option {
+    font-size: 18px;
+    font-family: "Lato", "Noto Sans", sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    display: inline-block;
+    line-height: 17px;
+    text-align: left;
+    width: 100px;
+}
+
 /* Display all titles in red */
 /*.magpie-view-title {
     color: red;
@@ -49,5 +60,7 @@ input[name="rating"]:checked + label {
   align-items: center;
   display: block;
   margin: 5px;
+
+
 
 }
