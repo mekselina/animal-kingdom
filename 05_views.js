@@ -150,7 +150,7 @@ const slider_rating_custom = magpieViews.view_generator("slider_rating",{
           const option2 = config.data[CT].optionRight;
           return `<p class='magpie-view-question'><font size = 4 color = "gray">${config.data[CT].question}</font></p>
                   <div class='magpie-view-answer-container'>
-                      <span class='magpie-response-slider-option'>${option1}</span>
+                      <span class='magpie-response-slider-option'><font size = 20 color = "gray">${option1}</font></span>
                       <input type='range' id='response' class='magpie-response-slider' min='0' max='100' value='50'/>
                       <span class='magpie-response-slider-option'>${option2}</span>
                   </div>
