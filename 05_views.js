@@ -125,7 +125,7 @@ const thanks = magpieViews.view_generator("thanks", {
 // Here, we initialize a normal forced_choice view
 const slider_rating_custom = magpieViews.view_generator("slider_rating",{
   // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: 15,
+  trials: 26,
   // name should be identical to the variable name
   name: 'slider_rating_custom',
   //data: _.shuffle(task_trial_info.sliderRating)
@@ -151,7 +151,7 @@ const slider_rating_custom = magpieViews.view_generator("slider_rating",{
           return `<p class='magpie-view-question'><font size = 4 color = "gray">${config.data[CT].question}</font></p>
                   <div class='magpie-view-answer-container'>
                       <span class='magpie-response-slider-option'>${option1}</span>
-                      <input type='range' id='response' class='magpie-response-slider' min='1' max='7' value='4'/>
+                      <input type='range' id='response' class='magpie-response-slider' min='0' max='100' value='50'/>
                       <span class='magpie-response-slider-option'>${option2}</span>
                   </div>
                   <button id="next" class='magpie-view-button magpie-nodisplay'>Next</button>`;
