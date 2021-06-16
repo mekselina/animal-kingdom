@@ -9,10 +9,10 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 
 
 
-/* Helper functions
-*
-*
-*/
+//Helper functions
+
+
+
 const create_experimental_data = function(nonnegated_data, negated_data) {
   /*decide whether participant is in nonnegated or negated experiment lists
   *randomize for each animal whether non-intensified or intensified condition(1 out of 3) will be shown in either
@@ -31,8 +31,13 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
 
   //store every statement of every animal for one participant
   var all_statements = {sliderRating:[]};
+  var count_actual;
+  var count_literal;
+  var count_real;
 
-  const modal_adjectives = ['actual', 'literal', 'real'];
+  const adjectives = ["real", "real", "real", "real", "real", "literal", "literal", "literal", "literal", "actual", "actual", "actual", "actual"];
+  const adjectives_shuffled = adjectives.sort((a, b) => 0.5 - Math.random());
+
   // loop through different animals
   for (const [animal, values] of Object.entries(experimental_data)) {
     //console.log(`${animal}: ${values}`);
@@ -42,15 +47,24 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
 
     all_statements.sliderRating.push(values.find(item => item.condition === "non-intensified"));
 
-    var random_number = Math.random();
+    var random_adjective = adjectives_shuffled.pop()
 
-    if (random_number <= 1/3) {
-      all_statements.sliderRating.push(values.find(item => item.modal === "actual"));
-    } else if (random_number <= 2/3) {
-      all_statements.sliderRating.push(values.find(item => item.modal === "literal"));
-    } else {
-      all_statements.sliderRating.push(values.find(item => item.modal === "real"));
-    }
+    all_statements.sliderRating.push(values.find(item => item.modal === random_adjective));
+
+    //var random_number = Math.random();
+
+    //if (random_number <= 1/3 && count_actual <= 4) {
+      //all_statements.sliderRating.push(values.find(item => item.modal === "actual"));
+      //count_actual = count_actual + 1;
+    //} else if (random_number <= 2/3 && count_literal <= 4) {
+      //all_statements.sliderRating.push(values.find(item => item.modal === "literal"));
+      //count_literal = count_literal + 1;
+    //} else if (random_number > 2/3 && count_real <= 5){
+      //all_statements.sliderRating.push(values.find(item => item.modal === "real"));
+      //count_real = count_real + 1
+    //} else {
+      //console.log("Something went wrong during enumeration.");
+    //}
 
 
   }
