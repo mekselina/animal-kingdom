@@ -62,7 +62,7 @@ const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
   title: 'Instructions',
-  text: `In order to complete the task, each trial you will be asked to read a metaphoric statement and to rate how much you think it matches a given characteristic.`,
+  text: `Each trial you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate to what extent you think that the person matches a given characteristic from 0(not matching the characteristic at all) to 100(highly matching the characteristic).`,
   buttonText: 'Proceed to task'
 });
 
