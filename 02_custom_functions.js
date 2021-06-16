@@ -22,7 +22,7 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   // decide if person gets negated or non negated statements
   var experimental_data;
   const negation_number = Math.random();
-  console.log(negation_number);
+  //console.log(negation_number);
   if (negation_number < 0.5) {
     experimental_data = nonnegated_data;
   } else {
@@ -50,22 +50,6 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
     var random_adjective = adjectives_shuffled.pop()
 
     all_statements.sliderRating.push(values.find(item => item.modal === random_adjective));
-
-    //var random_number = Math.random();
-
-    //if (random_number <= 1/3 && count_actual <= 4) {
-      //all_statements.sliderRating.push(values.find(item => item.modal === "actual"));
-      //count_actual = count_actual + 1;
-    //} else if (random_number <= 2/3 && count_literal <= 4) {
-      //all_statements.sliderRating.push(values.find(item => item.modal === "literal"));
-      //count_literal = count_literal + 1;
-    //} else if (random_number > 2/3 && count_real <= 5){
-      //all_statements.sliderRating.push(values.find(item => item.modal === "real"));
-      //count_real = count_real + 1
-    //} else {
-      //console.log("Something went wrong during enumeration.");
-    //}
-
 
   }
   return all_statements;
