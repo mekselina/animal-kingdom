@@ -22,7 +22,7 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   // decide if person gets negated or non negated statements
   var experimental_data;
   const negation_number = Math.random();
-  //console.log(negation_number);
+
   if (negation_number < 0.5) {
     experimental_data = nonnegated_data;
   } else {
@@ -34,8 +34,11 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   var count_actual;
   var count_literal;
   var count_real;
+  var adjectives_once = ["actual", "literal", "real"];
+  var pick_random_adjective = adjectives_once[Math.floor(Math.random()*adjectives_once.length)];
 
-  const adjectives = ["real", "real", "real", "real", "real", "literal", "literal", "literal", "literal", "actual", "actual", "actual", "actual"];
+  const adjectives = ["actual", "actual", "actual", "actual", "literal", "literal", "literal", "literal", "real", "real", "real", "real"];
+  adjectives.push(pick_random_adjective);
   const adjectives_shuffled = adjectives.sort((a, b) => 0.5 - Math.random());
 
   // loop through different animals
@@ -50,6 +53,7 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
     var random_adjective = adjectives_shuffled.pop()
 
     all_statements.sliderRating.push(values.find(item => item.modal === random_adjective));
+
 
   }
   return all_statements;
