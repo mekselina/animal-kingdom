@@ -64,7 +64,18 @@ const instructions = magpieViews.view_generator("instructions", {
   title: 'Instructions',
   text: `Each trial you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate to what extent you think that the person matches a given characteristic. The rating goes from 0 (not matching the characteristic at all) to 100 (highly matching the characteristic).`,
   buttonText: 'Proceed to task'
-});
+},
+{stimulus_container_generator: function(config, CT) {
+        return `<div class='magpie-view'>
+                    <h1 class='magpie-view-title'>${config.title}</h1>
+                    <section class="magpie-text-container">
+                        <p class="magpie-view-text">${config.text}</p>
+                    </section>
+                    <div class="picture" style="width:50%" align="center">
+                    <img src="./images/example.png">
+                    </div>
+                </div>`;
+    }});
 
 
 // In the post test questionnaire you can ask your participants addtional questions
