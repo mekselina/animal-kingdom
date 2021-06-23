@@ -47,7 +47,7 @@ const legal_info = magpieViews.view_generator("intro", {
           <br />
           <span style="margin-left:2em">You voluntarily agree to participate and understand that you can stop your participation at any time.</span>
           <br />
-          <span style="margin-left:2em">You agree that your <b>anonymous</b> data may be kept permanently in University of Edinburgh archives and may be used by qualified researchers for teaching and research purposes.</span>
+          <span style="margin-left:2em">You agree that your <b>anonymous</b> data may be kept permanently in University of Osnabrück archives and may be used by qualified researchers for teaching and research purposes.</span>
           <br />
           <br />
           If you do not agree to all of these points, please close your browser window now.
@@ -62,7 +62,7 @@ const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
   title: 'Instructions',
-  text: `Each trial you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate to what extent you think that the person matches a given characteristic. The rating goes from 0 (not matching the characteristic at all) to 100 (highly matching the characteristic).`,
+  text: `Each trial you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate how much you think that the person matches a given characteristic. The rating goes from not matching the characteristic at all on the left side to very much matching the characteristic on the right side.`,
   buttonText: 'Proceed to task'
 },
 {stimulus_container_generator: function(config, CT) {
