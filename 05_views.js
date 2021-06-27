@@ -33,7 +33,7 @@ const legal_info = magpieViews.view_generator("intro", {
   name: 'legal_info',
   title: 'Legal information',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `In this task, you will be asked to read short metaphoric statements presented in the absence of context and to guess what these statements might mean. The whole experiment should take up to five minutes.
+  text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. The whole experiment should take up to five minutes.
          <br />
          <br />
          The only condition on taking part is that you are <b>over 18</b>.
@@ -60,7 +60,7 @@ const instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions',
   title: 'Instructions',
-  text: `Each trial you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate how much you think that the person matches a given characteristic. The rating goes from not matching the characteristic at all on the left side to very much matching the characteristic on the right side.`,
+  text: `Each trial, you will read a metaphoric statement about a person. In order to complete the task, you will be asked to rate how much you think that the person matches a given characteristic. The rating goes from not matching the characteristic at all on the left side to very much matching the characteristic on the right side.`,
   buttonText: 'Proceed to task'
 },
 {stimulus_container_generator: function(config, CT) {
