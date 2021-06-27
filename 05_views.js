@@ -64,15 +64,17 @@ const instructions = magpieViews.view_generator("instructions", {
   buttonText: 'Proceed to task'
 },
 {stimulus_container_generator: function(config, CT) {
-        return `<div class='magpie-view'>
-                    <h1 class='magpie-view-title'>${config.title}</h1>
-                    <section class="magpie-text-container">
-                        <p class="magpie-view-text">${config.text}</p>
-                    </section>
-                    <div class="picture" style="width:50%" align="center">
-                    <img src="./images/example.png">
-                    </div>
-                </div>`;
+  return `<div class='magpie-view'>
+              <h1 class='magpie-view-title'>${config.title}</h1>
+              <section class="magpie-text-container">
+                  <p class="magpie-view-text">${config.text}</p>
+              </section>
+              <div align='center'>
+                  <br />
+                  <br />
+                  <img class="magpie-view-picture" src="./images/instruction_pic.png">
+              </div>
+          </div>`;
     }});
 
 
