@@ -22,7 +22,7 @@ const create_experimental_data = function(nonnegated_data) {
   // decide if person gets negated or non negated statements
   var experimental_data;
   const negation_number = Math.random();
-  console.log(negation_number);
+  
   if (negation_number < 1) {
     experimental_data = nonnegated_data;
   } else {
