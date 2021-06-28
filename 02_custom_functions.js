@@ -13,7 +13,7 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 
 
 
-const create_experimental_data = function(nonnegated_data, negated_data) {
+const create_experimental_data = function(nonnegated_data) {
   /*decide whether participant is in nonnegated or negated experiment lists
   *randomize for each animal whether non-intensified or intensified condition(1 out of 3) will be shown in either
   *nonnegated or negated list
@@ -22,8 +22,8 @@ const create_experimental_data = function(nonnegated_data, negated_data) {
   // decide if person gets negated or non negated statements
   var experimental_data;
   const negation_number = Math.random();
-
-  if (negation_number < 0.5) {
+  console.log(negation_number);
+  if (negation_number < 1) {
     experimental_data = nonnegated_data;
   } else {
     experimental_data = negated_data;

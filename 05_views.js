@@ -72,7 +72,7 @@ const instructions = magpieViews.view_generator("instructions", {
               <div align='center'>
                   <br />
                   <br />
-                  <img class="magpie-view-picture" src="./images/instruction_pic.png">
+                  <img class="magpie-view-picture" src="./images/final_pic.png">
               </div>
           </div>`;
     }});
@@ -140,7 +140,7 @@ const slider_rating_custom = magpieViews.view_generator("slider_rating",{
   // name should be identical to the variable name
   name: 'slider_rating_custom',
   //data: _.shuffle(task_trial_info.sliderRating)
-  data: _.shuffle(create_experimental_data(task_trial_info_nonnegated, task_trial_info_negated).sliderRating)
+  data: _.shuffle(create_experimental_data(task_trial_info_nonnegated).sliderRating)
   // optionLeft: "Not at all confident",
   // optionRight: "Very confident",
 },

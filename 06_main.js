@@ -24,12 +24,12 @@ $("document").ready(function() {
         ],
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "52",
+            experimentID: "60",
             serverAppURL: "https://mcmpact.ikw.uni-osnabrueck.de/magpie/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
-            deployMethod: "debug",
+            deployMethod: "Prolific",
             contact_email: "vinicius.macuch.silva@uni-osnabrueck.de",
             prolificURL: "https://app.prolific.co/submissions/complete?cc=7921B401"
         },
