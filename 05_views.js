@@ -33,24 +33,26 @@ const legal_info = magpieViews.view_generator("intro", {
   name: 'legal_info',
   title: 'Legal information',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. The whole experiment should take up to five minutes.
+  text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. Every now and then you will be asked questions about the statements. The whole experiment should take up to five minutes.
          <br />
          <br />
-         The only condition on taking part is that you are <b>over 18</b>.
+         The only condition on taking part is that you are <b>over 18</b>. Please follow this <a href="http://blake.ppls.ed.ac.uk/~pling/consent-vinicius.html">link</a> to read the consent form about participating in the experiment.
          <br />
          <br />
-         By clicking the accept button below, you indicate that:
-         <br />
-         <br />
-         You are over 18.
-         <br />
-         <br />
-         You voluntarily agree to participate and understand that you can stop your participation at any time.
-         <br />
-         <br />
-         You agree that your <b>anonymous</b> data may be kept permanently in University of Osnabrück archives and may be used by qualified researchers for teaching and research purposes.
-         <br />
-         <br />
+          By clicking the accept button below, you indicate that:
+          <br />
+          <span style="margin-left:2em">You are over 18.</span>
+          <br />
+          <span style="margin-left:2em">You have read the consent form.</span>
+          <br />
+          <span style="margin-left:2em">You voluntarily agree to participate and understand that you can stop your participation at any time.</span>
+          <br />
+          <span style="margin-left:2em">You agree that your <b>anonymous</b> data may be kept permanently in University of Edinburgh archives and may be used by qualified researchers for teaching and research purposes.</span>
+          <br />
+          <br />
+          If you do not agree to all of these points, please close your browser window now.
+          <br />
+          <br />
           `,
   buttonText: 'Begin the experiment'
 });
