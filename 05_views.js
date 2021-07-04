@@ -36,7 +36,7 @@ const legal_info = magpieViews.view_generator("intro", {
   text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. Every now and then you will be asked questions about the statements. The whole experiment should take up to five minutes.
          <br />
          <br />
-         The only condition on taking part is that you are <b>over 18</b>. Please follow this <a href="http://blake.ppls.ed.ac.uk/~pling/consent-vinicius.html">link</a> to read the consent form about participating in the experiment.
+         The only condition on taking part is that you are <b>over 18</b>. Please follow this <a href="file:///Users/mekselina/Downloads/consent-vinicius.html">link</a> to read the consent form about participating in the experiment.
          <br />
          <br />
           By clicking the accept button below, you indicate that:
