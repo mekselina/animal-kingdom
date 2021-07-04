@@ -24,19 +24,19 @@ const intro = magpieViews.view_generator("intro", {
   name: 'intro',
   title: 'Welcome',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `Thank you for participating in our study. Before starting the experiment, please read the legal information on the next page carefully.`,
+  text: `Thank you for participating in our study. Before starting the experiment, please read the legal information on the next pages carefully.`,
   buttonText: 'Show me the legal information'
 });
 
-const legal_info = magpieViews.view_generator("intro", {
+const legal_info_1 = magpieViews.view_generator("intro", {
   trials: 1,
-  name: 'legal_info',
+  name: 'legal_info_1',
   title: 'Legal information',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. Every now and then you will be asked questions about the statements. The whole experiment should take up to five minutes.
+  text: `In this task, you will be asked to read short metaphoric statements and to guess what these statements might mean. The whole experiment should take up to five minutes.
          <br />
          <br />
-         The only condition on taking part is that you are <b>over 18</b>. Please follow this <a href="file:///Users/mekselina/Downloads/consent-vinicius.html">link</a> to read the consent form about participating in the experiment.
+         The only condition on taking part is that you are <b>over 18</b>. Please read the consent form about participating in the experiment on the next page.
          <br />
          <br />
           By clicking the accept button below, you indicate that:
@@ -53,6 +53,57 @@ const legal_info = magpieViews.view_generator("intro", {
           If you do not agree to all of these points, please close your browser window now.
           <br />
           <br />
+          `,
+  buttonText: 'Read consent form'
+});
+
+const legal_info_2 = magpieViews.view_generator("intro", {
+  trials: 1,
+  name: 'legal_info_2',
+  title: 'Consent Form',
+  // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
+  text: `<p><b>This experiment is being conducted as part of ongoing research at The University of Edinburgh. Please read the following consent form carefully before continuing. If you have any questions or comments about the study, please email the study organizer at <a href="mailto:vinicius.macuch.silva@uni-osnabrueck.de">vinicius.macuch.silva@uni-osnabrueck.de</a>. </b></p>      <hr>
+
+        <p align="center" style="line-height: 100%">LANGUAGE PRODUCTION AND COMPREHENSION EXPERIMENTS </p>
+
+  Consent for Participation in Experiments, Data Use, and Data Storage<br><br>
+
+  Study title:	Pragmatics of linguistic communication<br>
+  Principal Investigator:	Dr Hannah Rohde<br><br>
+  Researcher Collecting Data: Vinicius Macuch Silva<br><br>
+
+  <b>Nature of the study.</b> You are about to participate in a study which involves reading sentences carefully, answering questions about them, or writing text after a short sentence prompt. Before you start, we will have some questions about you (e.g., age, gender, language background). Your responses will be recorded. Your session should last for up to 5 minutes. You will be given full instructions shortly.<br><br>
+
+  <b>Compensation.</b> You will be paid at the posted rate for your participation in this study.<br><br>
+
+  <b>Risks and benefits.</b>  There are no known risks to participation in this study. Other than the payment mentioned, there are no tangible benefits to you, however you will be contributing to our knowledge about language.
+  <br><br>
+
+  <b>Confidentiality and use of data.</b> All the information we collect during the course of the research will be processed in accordance with Data Protection Law. In order to safeguard your privacy, we will never share personal information (like your name) with anyone outside the research team. Your data will be referred to by a unique participant number rather than by name). Please note that we will temporarily collect your participant ID to prevent repeated participation, however we will never share this information with anyone outside the research team. We will store any personal data (i.e., participant ID) securely using the University of Osnabr&uuml;ck’s storage systems. The anonymised data collected during this study will be used for research purposes and may be shared with other researchers or with the general public (e.g., we may make it available through the world wide web, or use it in TV or radio broadcasts).
+  <br><br>
+
+  <b>What are my data protection rights?</b> The University of Edinburgh is a Data Controller for the information you provide.  You have the right to access information held about you. Your right of access can be exercised in accordance Data Protection Law. You also have other rights including rights of correction, erasure and objection.  For more details, including the right to lodge a complaint with the Information Commissioner’s Office, please visit www.ico.org.uk.  Questions, comments and requests about your personal data can also be sent to the University Data Protection Officer at dpo@ed.ac.uk.
+  <br><br>
+
+  <b>Voluntary participation and right to withdraw.</b> Your participation is voluntary, and you may withdraw from the study at any time and for any reason. If you withdraw from the study after data gathering, we will delete your data and there is no penalty or loss of benefits to which you are otherwise entitled. To withdraw from the study after data gathering please contact the research team within a week of participation by providing your prolific participant ID. After this deadline we will delete the participant IDs which means we won’t be able to identify you to delete your data.
+  <br><br>
+
+  If you have any questions about what you’ve just read, please feel free to ask, or contact us later. You can contact us by email at vinicius.macuch.silva@uni-osnabrueck.de. This project has been approved by PPLS Ethics committee. If you have questions or comments regarding your rights as a participant, they can be contacted at +44 (0)131 651 5510 or ppls.ethics@ed.ac.uk.
+
+
+  By proceeding with this experiment, you consent to the following: <br><br>
+  1.	I agree to participate in this study.<br>
+  2.	I confirm that I have read and understood how my data will be stored and used.<br>
+  3.	I understand that I have the right to terminate this session at any point. If I choose to withdraw after completing the study by contacting the research team in the week after participation, my data will be deleted at that time.<br>
+
+
+
+
+        <form method="POST" action="informed_consent2.php?student_id='.$student_id.'" autocomplete="off">
+
+          <p align="left" style="line-height: 100%">
+
+        </form>
           `,
   buttonText: 'Begin the experiment'
 });

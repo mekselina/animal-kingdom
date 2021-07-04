@@ -16,7 +16,8 @@ $("document").ready(function() {
         // You have to specify all views you want to use in this experiment and the order of them
         views_seq: [
             intro,
-            legal_info,
+            legal_info_1,
+            legal_info_2,
             instructions,
             slider_rating_custom,
             post_test,
