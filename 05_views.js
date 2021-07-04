@@ -68,7 +68,7 @@ const legal_info_2 = magpieViews.view_generator("intro", {
 
   Consent for Participation in Experiments, Data Use, and Data Storage<br><br>
 
-  Study title:	Pragmatics of linguistic communication<br>
+  Study title:	Pragmatics of linguistic communication<br><br>
   Principal Investigator:	Dr Hannah Rohde<br><br>
   Researcher Collecting Data: Vinicius Macuch Silva<br><br>
 
